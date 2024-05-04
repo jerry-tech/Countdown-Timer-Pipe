@@ -1,4 +1,14 @@
-<p><span><span>Non Pausable Count Down Timer </span>{{ dueDate | countdown | async }}</span></p>
-<p><span><span>Pausable Count Down Timer </span>{{ dueDate | countdown : isPaused | async}}</span></p>
+<p>
+  <span class="countdown-timer">
+    Non Pausable Count Down Timer {{ dueDate | countdown | async }}
+  </span>
+</p>
+
+<p class="pausable-timer">
+  <span class="countdown-timer">
+    Pausable Count Down Timer {{ dueDate | countdown : isPaused | async}}
+  </span>
+</p>
+
 <button *ngIf="!isPaused" (click)="pauseTime()">Pause Timer </button>
 

@@ -8,7 +8,7 @@ import {BehaviorSubject} from "rxjs";
 })
 export class AppComponent implements OnInit {
   title = 'Countdown-Timer-Pipe';
-  dueDate = '2023-11-30T00:00:00' // Also, Works with YYYY-MM-DDTHH:mm:ss.msz date format.
+  dueDate = '2029-11-30T00:00:00' // Also, Works with YYYY-MM-DDTHH:mm:ss.msz date format.
   pauseTimerSubject = new BehaviorSubject<boolean>(false);
   isPaused = false;
 
@@ -21,10 +21,5 @@ export class AppComponent implements OnInit {
   pauseTime() {
     this.pauseTimerSubject.next(true);
   }
-
-  resumeTime() {
-    this.pauseTimerSubject.next(false);
-  }
-
 
 }

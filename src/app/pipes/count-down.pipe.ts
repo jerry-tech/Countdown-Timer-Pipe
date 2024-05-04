@@ -20,9 +20,9 @@ export class CountdownPipe implements PipeTransform {
     seconds = (seconds < 10) ? '0' + seconds : seconds;
 
     if (msRemaining < 0) {
-      return `-${days}:${hours}:${minutes}:${seconds}`;
+      return `-${days} Days: ${hours} Hours: ${minutes} Minutes: ${seconds} Seconds`;
     } else {
-      return `${days}:${hours}:${minutes}:${seconds}`;
+      return `${days} Days: ${hours} Hours: ${minutes} Minutes: ${seconds} Seconds`;
     }
   }
 
